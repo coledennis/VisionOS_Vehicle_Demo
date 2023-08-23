@@ -11,7 +11,8 @@ import SwiftUI
 struct PathfinderV3App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            TabMenuView()
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
