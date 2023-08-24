@@ -27,9 +27,9 @@ struct MainWindowView: View {
 //
 //            Text("Hello, world!")
 //
-//            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-//                .toggleStyle(.button)
-//                .padding(.top, 50)
+            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
+                .toggleStyle(.button)
+                .padding(.top, 50)
         }
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
