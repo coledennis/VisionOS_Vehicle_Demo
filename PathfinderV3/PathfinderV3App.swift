@@ -9,10 +9,14 @@ import SwiftUI
 
 @main
 struct PathfinderV3App: App {
+    
+    @State var viewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
 //            ContentView()
             TabMenuView()
+                .environment(viewModel)
         }
 
         ImmersiveSpace(id: "ImmersiveSpace") {

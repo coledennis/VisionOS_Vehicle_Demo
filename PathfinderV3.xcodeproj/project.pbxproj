@@ -81,6 +81,7 @@
 				B4290F5A2A9641E000102EA2 /* PathfinderV3App.swift */,
 				B4290F6E2A96445A00102EA2 /* TabMenuView.swift */,
 				B4290F6C2A96436100102EA2 /* MainWindowView.swift */,
+				B4290F5E2A9641E000102EA2 /* ImmersiveView.swift */,
 				B41024E42A97D618004BEDFB /* Data */,
 				B4290F6B2A96432B00102EA2 /* OLD VIEWS */,
 				B4290F602A9641E200102EA2 /* Assets.xcassets */,
@@ -110,7 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				B4290F5C2A9641E000102EA2 /* ContentView.swift */,
-				B4290F5E2A9641E000102EA2 /* ImmersiveView.swift */,
 			);
 			path = "OLD VIEWS";
 			sourceTree = "<group>";

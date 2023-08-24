@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import Observation
+
+
+@Observable
+class ViewModel {
+    
+    var showImmersiveSpace = false
+    var immersiveSpaceIsShown = false
+    
+}
