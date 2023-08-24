@@ -10,25 +10,26 @@ import SwiftUI
 struct TabMenuView: View {
     var body: some View {
         TabView {
-            Text("View 1")
+            MainWindowView(experienceModule: .showroom)
                 .tabItem {
                     Label("Showroom", systemImage: "sparkles")
                 }
 //                .frame(depth: 2, alignment: .front)
-                Text("View 2")
+            MainWindowView(experienceModule: .precheck)
+
                 .tabItem {
                     Label("Pre-Check", systemImage: "list.bullet.clipboard")
                 }
 //                .frame(depth: 2, alignment: .front)
-            Text("View 3")
+            MainWindowView(experienceModule: .startup)
                 .tabItem {
                     Label("Start Up", systemImage: "checkmark")
                 }
-            Text("View 4")
+            MainWindowView(experienceModule: .shutdown)
                 .tabItem {
                     Label("Shut Down", systemImage: "xmark")
                 }
-            Text("View 5")
+            MainWindowView(experienceModule: .attachments)
                 .tabItem {
                     Label("Attachments", systemImage: "plus")
                 }

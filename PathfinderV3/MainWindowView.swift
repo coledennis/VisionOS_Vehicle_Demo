@@ -17,16 +17,19 @@ struct MainWindowView: View {
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
 
+    let experienceModule : ExperienceModule
+    
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
-
-            Text("Hello, world!")
-
-            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
+            Text(experienceModule.windowTitle)
+//            Model3D(named: "Scene", bundle: realityKitContentBundle)
+//                .padding(.bottom, 50)
+//
+//            Text("Hello, world!")
+//
+//            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
+//                .toggleStyle(.button)
+//                .padding(.top, 50)
         }
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
@@ -51,5 +54,5 @@ struct MainWindowView: View {
 }
 
 #Preview {
-    MainWindowView()
+    MainWindowView(experienceModule: .showroom)
 }
