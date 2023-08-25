@@ -10,6 +10,7 @@
 		B41024E32A97D612004BEDFB /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41024E22A97D612004BEDFB /* ViewModel.swift */; };
 		B41024E62A97D6A9004BEDFB /* ExperienceModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41024E52A97D6A9004BEDFB /* ExperienceModule.swift */; };
 		B41024E82A97D706004BEDFB /* HotSpotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41024E72A97D706004BEDFB /* HotSpotData.swift */; };
+		B41024EA2A97E58F004BEDFB /* VehicleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B41024E92A97E58F004BEDFB /* VehicleView.swift */; };
 		B4290F592A9641E000102EA2 /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = B4290F582A9641E000102EA2 /* RealityKitContent */; };
 		B4290F5B2A9641E000102EA2 /* PathfinderV3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4290F5A2A9641E000102EA2 /* PathfinderV3App.swift */; };
 		B4290F5D2A9641E000102EA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4290F5C2A9641E000102EA2 /* ContentView.swift */; };
@@ -24,6 +25,7 @@
 		B41024E22A97D612004BEDFB /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		B41024E52A97D6A9004BEDFB /* ExperienceModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperienceModule.swift; sourceTree = "<group>"; };
 		B41024E72A97D706004BEDFB /* HotSpotData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSpotData.swift; sourceTree = "<group>"; };
+		B41024E92A97E58F004BEDFB /* VehicleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleView.swift; sourceTree = "<group>"; };
 		B4290F532A9641E000102EA2 /* PathfinderV3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathfinderV3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4290F572A9641E000102EA2 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		B4290F5A2A9641E000102EA2 /* PathfinderV3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathfinderV3App.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				B4290F5A2A9641E000102EA2 /* PathfinderV3App.swift */,
 				B4290F6E2A96445A00102EA2 /* TabMenuView.swift */,
 				B4290F6C2A96436100102EA2 /* MainWindowView.swift */,
+				B41024E92A97E58F004BEDFB /* VehicleView.swift */,
 				B4290F5E2A9641E000102EA2 /* ImmersiveView.swift */,
 				B41024E42A97D618004BEDFB /* Data */,
 				B4290F6B2A96432B00102EA2 /* OLD VIEWS */,
@@ -189,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4290F5D2A9641E000102EA2 /* ContentView.swift in Sources */,
+				B41024EA2A97E58F004BEDFB /* VehicleView.swift in Sources */,
 				B4290F5B2A9641E000102EA2 /* PathfinderV3App.swift in Sources */,
 				B4290F5F2A9641E000102EA2 /* ImmersiveView.swift in Sources */,
 				B4290F6F2A96445A00102EA2 /* TabMenuView.swift in Sources */,

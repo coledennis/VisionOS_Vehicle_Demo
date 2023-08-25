@@ -16,21 +16,26 @@ struct MainWindowView: View {
     let experienceModule : ExperienceModule
     
     var body: some View {
-        VStack {
-            Text(experienceModule.windowTitle)
-            //            Model3D(named: "Scene", bundle: realityKitContentBundle)
-            //                .padding(.bottom, 50)
-            //
-            //            Text("Hello, world!")
-            //
-            Button {
-                viewModel.showImmersiveSpace.toggle()
-            } label: {
-                Text("Show Immersive Space")
+        HStack {
+            VStack {
+                Text(experienceModule.windowTitle)
                     .padding()
+//                    .glassBackgroundEffect()
+                //            Model3D(named: "Scene", bundle: realityKitContentBundle)
+//                                .padding(.bottom, 50)
+                //
+                //            Text("Hello, world!")
+                //
+                Button {
+                    viewModel.showImmersiveSpace.toggle()
+                } label: {
+                    Text("Show Immersive Space")
+                        .padding()
+                }
             }
+            VehicleView()
         }
-        .padding()
+//        .padding()
     }
 }
 

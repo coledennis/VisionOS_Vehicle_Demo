@@ -18,6 +18,7 @@ struct PathfinderV3App: App {
             TabMenuView()
                 .environment(viewModel)
         }
+//        .windowStyle(.plain)
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
