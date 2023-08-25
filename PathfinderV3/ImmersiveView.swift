@@ -14,6 +14,11 @@ struct ImmersiveView: View {
         RealityView { content in
             // Add the initial RealityKit content
             if let scene = try? await Entity(named: "VehicleScene", in: realityKitContentBundle) {
+                
+                let anchor = AnchorEntity(.plane(.horizontal, classification: .floor,
+                                                 minimumBounds: [1, 1]))
+                content.add(anchor)
+                
                 content.add(scene)
                 scene.position.z = -5
             }

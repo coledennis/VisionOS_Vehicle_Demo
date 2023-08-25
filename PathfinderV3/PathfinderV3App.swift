@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ARKit
 
 @main
 struct PathfinderV3App: App {
@@ -14,12 +15,12 @@ struct PathfinderV3App: App {
     
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            //            ContentView()
             TabMenuView()
                 .environment(viewModel)
         }
-//        .windowStyle(.plain)
-
+        //        .windowStyle(.plain)
+        
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
