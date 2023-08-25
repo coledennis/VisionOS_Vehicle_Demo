@@ -33,7 +33,7 @@ struct MainWindowView: View {
                         .padding()
                 }
             }
-            VehicleView()
+            VehicleView(experienceModule: experienceModule)
         }
 //        .padding()
     }

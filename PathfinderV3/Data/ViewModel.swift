@@ -14,5 +14,6 @@ class ViewModel {
     
     var showImmersiveSpace = false
     var immersiveSpaceIsShown = false
-    
+ 
+    var currentHotSpot: Int = 1
 }

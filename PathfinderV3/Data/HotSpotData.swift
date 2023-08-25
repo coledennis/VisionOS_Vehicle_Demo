@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HotSpotData {
+struct HotSpotData: Hashable {
     let placement: Int
     let title: String
     let description: String

@@ -19,6 +19,7 @@
 		B4290F642A9641E200102EA2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4290F632A9641E200102EA2 /* Preview Assets.xcassets */; };
 		B4290F6D2A96436100102EA2 /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4290F6C2A96436100102EA2 /* MainWindowView.swift */; };
 		B4290F6F2A96445A00102EA2 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4290F6E2A96445A00102EA2 /* TabMenuView.swift */; };
+		B4C414962A9933B60008A13E /* HotSpotButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C414952A9933B60008A13E /* HotSpotButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		B4290F652A9641E200102EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4290F6C2A96436100102EA2 /* MainWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
 		B4290F6E2A96445A00102EA2 /* TabMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
+		B4C414952A9933B60008A13E /* HotSpotButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSpotButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				B4290F6E2A96445A00102EA2 /* TabMenuView.swift */,
 				B4290F6C2A96436100102EA2 /* MainWindowView.swift */,
 				B41024E92A97E58F004BEDFB /* VehicleView.swift */,
+				B4C414952A9933B60008A13E /* HotSpotButtonView.swift */,
 				B4290F5E2A9641E000102EA2 /* ImmersiveView.swift */,
 				B41024E42A97D618004BEDFB /* Data */,
 				B4290F6B2A96432B00102EA2 /* OLD VIEWS */,
@@ -193,6 +196,7 @@
 			files = (
 				B4290F5D2A9641E000102EA2 /* ContentView.swift in Sources */,
 				B41024EA2A97E58F004BEDFB /* VehicleView.swift in Sources */,
+				B4C414962A9933B60008A13E /* HotSpotButtonView.swift in Sources */,
 				B4290F5B2A9641E000102EA2 /* PathfinderV3App.swift in Sources */,
 				B4290F5F2A9641E000102EA2 /* ImmersiveView.swift in Sources */,
 				B4290F6F2A96445A00102EA2 /* TabMenuView.swift in Sources */,
