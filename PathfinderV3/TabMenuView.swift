@@ -16,30 +16,28 @@ struct TabMenuView: View {
     
     var body: some View {
         TabView {
-            MainWindowView(viewModel: viewModel, experienceModule: .showroom)
-                .tabItem {
-                    Label("Showroom", systemImage: "sparkles")
-                }
-            //                .frame(depth: 2, alignment: .front)
-            MainWindowView(viewModel: viewModel, experienceModule: .precheck)
-            
-                .tabItem {
-                    Label("Pre-Check", systemImage: "list.bullet.clipboard")
-                }
-            ////                .frame(depth: 2, alignment: .front)
-            MainWindowView(viewModel: viewModel, experienceModule: .startup)
+            ComboView(experienceModule: .showroom)
+            .tabItem {
+                Label("Showroom", systemImage: "list.bullet.clipboard")
+            }
+            ComboView(experienceModule: .precheck)
+            .tabItem {
+                Label("Pre-Check", systemImage: "list.bullet.clipboard")
+            }
+            ComboView(experienceModule: .startup)
                 .tabItem {
                     Label("Start Up", systemImage: "checkmark")
                 }
-            MainWindowView(viewModel: viewModel, experienceModule: .shutdown)
+              ComboView(experienceModule: .shutdown)
                 .tabItem {
                     Label("Shut Down", systemImage: "xmark")
                 }
-            MainWindowView(viewModel: viewModel, experienceModule: .attachments)
+            ComboView(experienceModule: .attachments)
                 .tabItem {
                     Label("Attachments", systemImage: "plus")
                 }
-        }
+            
+        }.animation(.default, value: viewModel.immersiveSpaceIsShown)
         .onChange(of: viewModel.showImmersiveSpace) { _, newValue in
             print("test 3")
             Task {

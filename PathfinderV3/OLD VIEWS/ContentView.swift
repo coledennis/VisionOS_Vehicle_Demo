@@ -19,8 +19,18 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
-                .padding(.bottom, 50)
+//            Model3D(named: "Scene", bundle: realityKitContentBundle)
+//                .padding(.bottom, 50)
+            if !immersiveSpaceIsShown {
+                RealityView { content, attachments in
+                    if let scene = try? await Entity(named: "Scene", in: realityKitContentBundle) {
+                        content.add(scene)
+                    }
+                } attachments: {
+                    
+                }
+            }
+            
 
             Text("Hello, world!")
 
@@ -50,6 +60,6 @@ struct ContentView: View {
     }
 }
 
-#Preview(windowStyle: .automatic) {
-    ContentView()
-}
+//#Preview(windowStyle: .automatic) {
+//    ContentView()
+//}

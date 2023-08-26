@@ -11,21 +11,17 @@ import RealityKitContent
 
 struct MainWindowView: View {
     
-    @Bindable var viewModel: ViewModel
+    @Environment(ViewModel.self) private var viewModel
     
     let experienceModule : ExperienceModule
+    
+    let largeScale: Bool
     
     var body: some View {
         HStack {
             VStack {
                 Text(experienceModule.windowTitle)
                     .padding()
-//                    .glassBackgroundEffect()
-                //            Model3D(named: "Scene", bundle: realityKitContentBundle)
-//                                .padding(.bottom, 50)
-                //
-                //            Text("Hello, world!")
-                //
                 Button {
                     viewModel.showImmersiveSpace.toggle()
                 } label: {
@@ -33,12 +29,14 @@ struct MainWindowView: View {
                         .padding()
                 }
             }
-            VehicleView(experienceModule: experienceModule)
+
+            if !largeScale {
+                VehicleView(experienceModule: experienceModule)
+            }
         }
-//        .padding()
     }
 }
 
 #Preview {
-    MainWindowView(viewModel: ViewModel.init(), experienceModule: .showroom)
+    MainWindowView(experienceModule: .showroom, largeScale: false)
 }

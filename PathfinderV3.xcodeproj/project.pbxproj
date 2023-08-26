@@ -20,6 +20,7 @@
 		B4290F6D2A96436100102EA2 /* MainWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4290F6C2A96436100102EA2 /* MainWindowView.swift */; };
 		B4290F6F2A96445A00102EA2 /* TabMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4290F6E2A96445A00102EA2 /* TabMenuView.swift */; };
 		B4C414962A9933B60008A13E /* HotSpotButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4C414952A9933B60008A13E /* HotSpotButtonView.swift */; };
+		B4DBEE462A9A9ADF0079A3D8 /* ComboView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DBEE452A9A9ADF0079A3D8 /* ComboView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		B4290F6C2A96436100102EA2 /* MainWindowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowView.swift; sourceTree = "<group>"; };
 		B4290F6E2A96445A00102EA2 /* TabMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabMenuView.swift; sourceTree = "<group>"; };
 		B4C414952A9933B60008A13E /* HotSpotButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSpotButtonView.swift; sourceTree = "<group>"; };
+		B4DBEE452A9A9ADF0079A3D8 /* ComboView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				B4290F5A2A9641E000102EA2 /* PathfinderV3App.swift */,
 				B4290F6E2A96445A00102EA2 /* TabMenuView.swift */,
+				B4DBEE452A9A9ADF0079A3D8 /* ComboView.swift */,
 				B4290F6C2A96436100102EA2 /* MainWindowView.swift */,
 				B41024E92A97E58F004BEDFB /* VehicleView.swift */,
 				B4C414952A9933B60008A13E /* HotSpotButtonView.swift */,
@@ -204,6 +207,7 @@
 				B41024E32A97D612004BEDFB /* ViewModel.swift in Sources */,
 				B41024E62A97D6A9004BEDFB /* ExperienceModule.swift in Sources */,
 				B41024E82A97D706004BEDFB /* HotSpotData.swift in Sources */,
+				B4DBEE462A9A9ADF0079A3D8 /* ComboView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
