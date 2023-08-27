@@ -14,12 +14,18 @@ struct ComboView: View {
     var body: some View {
         ZStack {
             MainWindowView(experienceModule: experienceModule, largeScale: true)
-            .opacity(viewModel.immersiveSpaceIsShown ? 1 : 0)
+                .opacity(viewModel.immersiveSpaceIsShown ? 1 : 0)
             
             MainWindowView(experienceModule: experienceModule, largeScale: false)
                 .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
         }
         .animation(.default, value: viewModel.immersiveSpaceIsShown)
+        .onAppear {
+            withAnimation {
+                viewModel.currentExperience = experienceModule
+                viewModel.currentHotSpot = 1
+            }
+        }
     }
 }
 

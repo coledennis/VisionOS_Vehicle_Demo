@@ -16,4 +16,6 @@ class ViewModel {
     var immersiveSpaceIsShown = false
  
     var currentHotSpot: Int = 1
+    
+    var currentExperience: ExperienceModule = .showroom
 }

@@ -31,7 +31,7 @@ struct MainWindowView: View {
             }
 
             if !largeScale {
-                VehicleView(experienceModule: experienceModule)
+                VehicleView(isFullScale: false)
             }
         }
     }
