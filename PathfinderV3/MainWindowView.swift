@@ -30,9 +30,9 @@ struct MainWindowView: View {
                 }
             }
 
-            if !largeScale {
-                VehicleView(isFullScale: false)
-            }
+//            if !largeScale {
+//                VehicleView(isFullScale: false)
+//            }
         }
     }
 }
