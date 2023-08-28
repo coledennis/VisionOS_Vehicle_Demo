@@ -36,8 +36,10 @@ struct MainWindowView: View {
                     
                     Spacer()
                     Button {
-                        if viewModel.currentHotSpot > 1 {
-                            viewModel.currentHotSpot -= 1
+                        withAnimation {
+                            if viewModel.currentHotSpot > 1 {
+                                viewModel.currentHotSpot -= 1
+                            }
                         }
                     } label: {
                         Image(systemName: "arrow.left")
@@ -49,10 +51,12 @@ struct MainWindowView: View {
                         .foregroundStyle(.secondary)
                     
                     Button {
-                        if viewModel.currentHotSpot < experienceModule.hotSpotArray.count {
-                            viewModel.currentHotSpot += 1
-                        } else {
-                            viewModel.currentHotSpot = 1
+                        withAnimation {
+                            if viewModel.currentHotSpot < experienceModule.hotSpotArray.count {
+                                viewModel.currentHotSpot += 1
+                            } else {
+                                viewModel.currentHotSpot = 1
+                            }
                         }
                     } label: {
                         if viewModel.currentHotSpot < experienceModule.hotSpotArray.count {
@@ -82,11 +86,18 @@ struct MainWindowView: View {
             .padding()
             .glassBackgroundEffect()
             
-            
+            if let image = currentHotSpot.imageName {
+                Image(image)
+                    .resizable()
+                    .clipShape(.rect(cornerRadius: 40))
+                    .aspectRatio(contentMode: .fit)
+            }
             // add ornament with controls
             HStack {
                 Button {
-                    viewModel.showImmersiveSpace.toggle()
+                    withAnimation {
+                        viewModel.showImmersiveSpace.toggle()
+                    }
                 } label: {
                     if !viewModel.immersiveSpaceIsShown {
                         Image(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left")
