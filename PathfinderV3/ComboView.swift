@@ -13,7 +13,7 @@ struct ComboView: View {
     let experienceModule : ExperienceModule
     var body: some View {
         ZStack {
-            MainWindowView(experienceModule: experienceModule, largeScale: true)
+            MainWindowView(experienceModule: experienceModule)
 //                .opacity(viewModel.immersiveSpaceIsShown ? 1 : 0)
             
 //            MainWindowView(experienceModule: experienceModule, largeScale: false)

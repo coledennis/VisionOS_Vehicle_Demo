@@ -18,4 +18,6 @@ class ViewModel {
     var currentHotSpot: Int = 1
     
     var currentExperience: ExperienceModule = .showroom
+    
+    var rotation = 0.0
 }

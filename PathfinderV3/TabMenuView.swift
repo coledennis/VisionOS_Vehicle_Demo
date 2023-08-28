@@ -14,36 +14,71 @@ struct TabMenuView: View {
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
     
+    @State var tab: ExperienceModule = .showroom
     var body: some View {
-        HStack {
-            TabView {
-                ComboView(experienceModule: .showroom)
-                    .tabItem {
-                        Label("Showroom", systemImage: "list.bullet.clipboard")
-                    }
-                ComboView(experienceModule: .precheck)
-                    .tabItem {
-                        Label("Pre-Check", systemImage: "list.bullet.clipboard")
-                    }
-                ComboView(experienceModule: .startup)
-                    .tabItem {
-                        Label("Start Up", systemImage: "checkmark")
-                    }
-                ComboView(experienceModule: .shutdown)
-                    .tabItem {
-                        Label("Shut Down", systemImage: "xmark")
-                    }
-                ComboView(experienceModule: .attachments)
-                    .tabItem {
-                        Label("Attachments", systemImage: "plus")
-                    }
-            }
-//            if !viewModel.immersiveSpaceIsShown {
-                VehicleView(isFullScale: false)
-                .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
-            
+        ZStack {
+//            TabView(selection: $tab) {
+//                ComboView(experienceModule: .showroom)
+//                    .tabItem {
+//                        Label("Showroom", systemImage: "list.bullet.clipboard")
+//                    }.tag(ExperienceModule.showroom)
+//                ComboView(experienceModule: .precheck)
+//                    .tabItem {
+//                        Label("Pre-Check", systemImage: "list.bullet.clipboard")
+//                    }.tag(ExperienceModule.precheck)
+//                ComboView(experienceModule: .startup)
+//                    .tabItem {
+//                        Label("Start Up", systemImage: "checkmark")
+//                    }.tag(ExperienceModule.startup)
+//                ComboView(experienceModule: .shutdown)
+//                    .tabItem {
+//                        Label("Shut Down", systemImage: "xmark")
+//                    }.tag(ExperienceModule.shutdown)
+//                ComboView(experienceModule: .attachments)
+//                    .tabItem {
+//                        Label("Attachments", systemImage: "plus")
+//                    }.tag(ExperienceModule.attachments)
 //            }
-        }.animation(.default, value: viewModel.immersiveSpaceIsShown)
+//            .animation(.spring, value: viewModel.immersiveSpaceIsShown)
+//            .opacity(viewModel.immersiveSpaceIsShown ? 1 : 0)
+            HStack {
+                //            TabView(selection: $tab,
+                //                    content:  {
+                //                Text("Tab Content 1").tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/ }.tag(ExperienceModule.showroom)
+                //                Text("Tab Content 2").tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(ExperienceModule.precheck)
+                //            })
+                TabView(selection: $tab) {
+                    ComboView(experienceModule: .showroom)
+                        .tabItem {
+                            Label("Showroom", systemImage: "list.bullet.clipboard")
+                        }.tag(ExperienceModule.showroom)
+                    ComboView(experienceModule: .precheck)
+                        .tabItem {
+                            Label("Pre-Check", systemImage: "list.bullet.clipboard")
+                        }.tag(ExperienceModule.precheck)
+                    ComboView(experienceModule: .startup)
+                        .tabItem {
+                            Label("Start Up", systemImage: "checkmark")
+                        }.tag(ExperienceModule.startup)
+                    ComboView(experienceModule: .shutdown)
+                        .tabItem {
+                            Label("Shut Down", systemImage: "xmark")
+                        }.tag(ExperienceModule.shutdown)
+                    ComboView(experienceModule: .attachments)
+                        .tabItem {
+                            Label("Attachments", systemImage: "plus")
+                        }.tag(ExperienceModule.attachments)
+                }
+                //            if !viewModel.immersiveSpaceIsShown {
+                VehicleView(isFullScale: false)
+                    .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
+                
+                //            }
+            }
+//            .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
+
+        }
+        .animation(.default, value: viewModel.immersiveSpaceIsShown)
             .onChange(of: viewModel.showImmersiveSpace) { _, newValue in
                 print("test 3")
                 Task {
