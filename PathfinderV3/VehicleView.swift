@@ -40,6 +40,7 @@ struct VehicleView: View {
                 
                 if isFullScale {
                     scene.position.z = -5
+//                    scene.parent?.position.z = -5
                 }
                 //                testEntity = scene
                 print("content added")

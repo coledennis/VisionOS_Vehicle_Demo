@@ -108,15 +108,15 @@ struct MainWindowView: View {
                 .buttonBorderShape(.circle)
                 
 
-                @Bindable var viewModelBound = viewModel
-                
-                Slider(value: $viewModelBound.rotation) {
-                    Text("Vehicle Rotation")
-                } minimumValueLabel: {
-                    Image(systemName: "arrow.left")
-                } maximumValueLabel: {
-                    Image(systemName: "arrow.right")
-                }
+//                @Bindable var viewModelBound = viewModel
+//                
+//                Slider(value: $viewModelBound.rotation) {
+//                    Text("Vehicle Rotation")
+//                } minimumValueLabel: {
+//                    Image(systemName: "arrow.left")
+//                } maximumValueLabel: {
+//                    Image(systemName: "arrow.right")
+//                }
 
             }
             .padding()

@@ -20,6 +20,15 @@
       {
         "isExpanded" : true,
         "isLocked" : false
+      },
+      [
+        "5EFD1FBC-EA16-49B8-B101-E0C8A3D6DFBF",
+        "Root",
+        "Volvo"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
       }
     ]
   },
@@ -64,7 +73,17 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "Sphere_Right"
+        "Volvo",
+        "Body",
+        "polySurface451_001"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -83,17 +102,7 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
-        "Volvo",
-        "Body",
-        "polySurface451_001"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root"
+        "Sphere_Right"
       ],
       {
         "isExpanded" : true,

@@ -72,6 +72,11 @@ struct TabMenuView: View {
                 //            if !viewModel.immersiveSpaceIsShown {
                 VehicleView(isFullScale: false)
                     .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
+                    .dragRotation(pitchLimit: .degrees(90))
+//                    .dragRotation(yawLimit: .degrees(20))
+
+//                    .placementGestures(initialPosition: Point3D([475, -1200.0, -1200.0]))
+
 //                    .rotation3DEffect(Rotation3D(angle: Angle2D(degrees: viewModel.rotation), axis: .y))
 
 //                    .frame(depth: 2, alignment: .front)
