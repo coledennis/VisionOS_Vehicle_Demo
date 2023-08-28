@@ -76,8 +76,16 @@ struct VehicleView: View {
                         if let testAttachment = attachments.entity(for: String(hotSpot.placement)+hotSpot.description) {
                             print("attachment")
                             // WHAT IF I MADE ENUM FOR PLACEMENTS (FRONT, TOP, SIDE) and called that enum here?
-                            testAttachment.position = [(Float(hotSpot.placement) * -0.1), 0.2, 0]
+                            
+                            if let coordinate = hotSpot.coordinate {
+                                testAttachment.position = (isFullScale ? coordinate.largeCoordinates : coordinate.smallCoordinates)
+                            } else {
+                                
+                                testAttachment.position = [(Float(hotSpot.placement) * -0.1), 0.2, 0]
+                            }
                             testAttachment.name = "attachment"
+                            
+                            testAttachment.scale = (isFullScale ? [8,8,8] : [1,1,1])
                             scene.addChild(testAttachment)
                             
                         }

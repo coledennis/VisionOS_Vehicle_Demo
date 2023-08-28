@@ -16,7 +16,7 @@ struct TabMenuView: View {
     
     @State var tab: ExperienceModule = .showroom
     var body: some View {
-        ZStack {
+//        ZStack {
 //            TabView(selection: $tab) {
 //                ComboView(experienceModule: .showroom)
 //                    .tabItem {
@@ -50,7 +50,7 @@ struct TabMenuView: View {
                 TabView(selection: $tab) {
                     ComboView(experienceModule: .showroom)
                         .tabItem {
-                            Label("Showroom", systemImage: "list.bullet.clipboard")
+                            Label("Showroom", systemImage: "sparkles")
                         }.tag(ExperienceModule.showroom)
                     ComboView(experienceModule: .precheck)
                         .tabItem {
@@ -72,12 +72,14 @@ struct TabMenuView: View {
                 //            if !viewModel.immersiveSpaceIsShown {
                 VehicleView(isFullScale: false)
                     .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
-                
+//                    .rotation3DEffect(Rotation3D(angle: Angle2D(degrees: viewModel.rotation), axis: .y))
+
+//                    .frame(depth: 2, alignment: .front)
                 //            }
             }
 //            .opacity(viewModel.immersiveSpaceIsShown ? 0 : 1)
 
-        }
+//        }
         .animation(.default, value: viewModel.immersiveSpaceIsShown)
             .onChange(of: viewModel.showImmersiveSpace) { _, newValue in
                 print("test 3")

@@ -19,5 +19,5 @@ class ViewModel {
     
     var currentExperience: ExperienceModule = .showroom
     
-    var rotation = 0.0
+    var rotation: Float = 0.0
 }

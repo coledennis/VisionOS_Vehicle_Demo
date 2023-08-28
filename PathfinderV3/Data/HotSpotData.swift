@@ -12,4 +12,5 @@ struct HotSpotData: Hashable {
     let title: String
     let description: String
     var imageName: String?
+    var coordinate: AttachmentLocations?
 }

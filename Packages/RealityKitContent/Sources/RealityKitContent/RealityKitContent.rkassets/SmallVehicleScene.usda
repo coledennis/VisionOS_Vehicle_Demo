@@ -7,28 +7,46 @@
 
 def Xform "Root"
 {
-    def Cube "Cube" (
+    def "Volvo" (
         active = true
-        prepend apiSchemas = ["MaterialBindingAPI"]
+        customData = {
+            float3 rotationEulerHint = (0, 3.1415927, 0)
+        }
+        prepend references = @Volvo.usdz@
     )
     {
-        rel material:binding = </Root/Cube/DefaultMaterial>
-        double size = 0.2
-        float3 xformOp:translate = (0, 0, 0)
+        quatf xformOp:orient = (-4.371139e-8, 0, 1, 0)
+        float3 xformOp:scale = (0.00046539484, 0.00046539484, 0.00046539484)
+        float3 xformOp:translate = (0, -0.075105846, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
 
-        def Material "DefaultMaterial"
-        {
-            prepend token outputs:surface.connect = </Root/Cube/DefaultMaterial/DefaultSurfaceShader.outputs:surface>
+    def Xform "Transform" (
+        active = true
+    )
+    {
+        float3 xformOp:translate = (-0.16842258, 0.060887866, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
 
-            def Shader "DefaultSurfaceShader"
-            {
-                uniform token info:id = "UsdPreviewSurface"
-                color3f inputs:diffuseColor = (1, 1, 1)
-                float inputs:roughness = 0.75
-                token outputs:surface
-            }
-        }
+    def Xform "Transform_1" (
+        active = true
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.050409704, 0.117324196, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+    }
+
+    def Xform "Transform_2" (
+        active = true
+    )
+    {
+        quatf xformOp:orient = (1, 0, 0, 0)
+        float3 xformOp:scale = (1, 1, 1)
+        float3 xformOp:translate = (0.17603302, 0.06455482, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
     }
 }
 
