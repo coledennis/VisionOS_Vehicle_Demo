@@ -20,7 +20,6 @@ struct PathfinderV3App: App {
         .windowStyle(.plain)
 
         ImmersiveSpace(id: "ImmersiveSpace") {
-//            ImmersiveView()
             VehicleView(isFullScale: true)
 //                .dragRotation(pitchLimit: .degrees(0))
 //                .rotation3DEffect(Rotation3D(angle: Angle2D(degrees: viewModel.rotation), axis: .y))

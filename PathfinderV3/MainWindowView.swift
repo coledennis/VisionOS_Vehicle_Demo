@@ -8,16 +8,12 @@
 import SwiftUI
 import RealityKit
 import RealityKitContent
+//import AVKit
 
 struct MainWindowView: View {
     @Environment(ViewModel.self) private var viewModel
-
-//    @Bindable(wrappedValue: ViewModel.self) private var viewModel
-    
     
     let experienceModule : ExperienceModule
-    
-    //    let largeScale: Bool
     
     var currentHotSpot: HotSpotData {
         experienceModule.hotSpotArray.first(where: {$0.placement == viewModel.currentHotSpot}) ?? HotSpotData(placement: 1, title: "Error", description: "Error")
@@ -30,11 +26,31 @@ struct MainWindowView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(currentHotSpot.title)
-                    //                Text(experienceModule.windowTitle)
                         .font(.largeTitle)
-                    //                    .padding()
                     
                     Spacer()
+                    
+                    Button {
+                        withAnimation {
+                            viewModel.showImmersiveSpace.toggle()
+                        }
+                    } label: {
+                        if !viewModel.immersiveSpaceIsShown {
+                            Image(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left")
+                        } else {
+                            Image(systemName: "arrow.down.right.and.arrow.up.left")
+                        }
+                    }
+                    .buttonBorderShape(.circle)
+                }
+                Text(experienceModule.windowTitle + " \(viewModel.currentHotSpot) / \(experienceModule.hotSpotArray.count)")
+                    .font(.headline)
+                    .padding(.bottom)
+                
+                Text(currentHotSpot.description)
+                    .font(.title2)
+                
+                HStack {
                     Button {
                         withAnimation {
                             if viewModel.currentHotSpot > 1 {
@@ -47,8 +63,7 @@ struct MainWindowView: View {
                     .buttonBorderShape(.circle)
                     .opacity(viewModel.currentHotSpot > 1 ? 1 : 0)
                     
-                    Text("\(viewModel.currentHotSpot) / \(experienceModule.hotSpotArray.count)")
-                        .foregroundStyle(.secondary)
+                    Spacer()
                     
                     Button {
                         withAnimation {
@@ -66,21 +81,7 @@ struct MainWindowView: View {
                         }
                     }
                     .buttonBorderShape(.circle)
-                    // arrow buttons
                 }
-                Text(experienceModule.windowTitle)
-                    .font(.headline)
-                //                .foregroundStyle(.secondary)
-                    .padding(.bottom)
-                
-                //            Text(currentHotSpot.title)
-                Text(currentHotSpot.description)
-//                Button {
-//                    viewModel.showImmersiveSpace.toggle()
-//                } label: {
-//                    Text("Show Immersive Space")
-//                        .padding()
-//                }
             }
             .padding()
             .padding()
@@ -92,43 +93,10 @@ struct MainWindowView: View {
                     .clipShape(.rect(cornerRadius: 40))
                     .aspectRatio(contentMode: .fit)
             }
-            // add ornament with controls
-            HStack {
-                Button {
-                    withAnimation {
-                        viewModel.showImmersiveSpace.toggle()
-                    }
-                } label: {
-                    if !viewModel.immersiveSpaceIsShown {
-                        Image(systemName: "arrow.up.left.and.down.right.and.arrow.up.right.and.down.left")
-                    } else {
-                        Image(systemName: "arrow.down.right.and.arrow.up.left")
-                    }
-                }
-                .buttonBorderShape(.circle)
-                
-
-//                @Bindable var viewModelBound = viewModel
-//                
-//                Slider(value: $viewModelBound.rotation) {
-//                    Text("Vehicle Rotation")
-//                } minimumValueLabel: {
-//                    Image(systemName: "arrow.left")
-//                } maximumValueLabel: {
-//                    Image(systemName: "arrow.right")
-//                }
-
-            }
-            .padding()
-            .glassBackgroundEffect()
-            //            if !largeScale {
-            //                VehicleView(isFullScale: false)
-            //            }
-            //        }
         }
     }
 }
-
-#Preview {
-    MainWindowView(experienceModule: .showroom)
-}
+    
+    #Preview {
+        MainWindowView(experienceModule: .showroom)
+    }

@@ -15,7 +15,18 @@
     "objectMetadataList" : [
       [
         "5EFD1FBC-EA16-49B8-B101-E0C8A3D6DFBF",
-        "Root"
+        "Root",
+        "Sphere"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5EFD1FBC-EA16-49B8-B101-E0C8A3D6DFBF",
+        "Root",
+        "Sphere",
+        "DefaultMaterial"
       ],
       {
         "isExpanded" : true,
@@ -25,6 +36,14 @@
         "5EFD1FBC-EA16-49B8-B101-E0C8A3D6DFBF",
         "Root",
         "Volvo"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "5EFD1FBC-EA16-49B8-B101-E0C8A3D6DFBF",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -72,17 +91,6 @@
     "objectMetadataList" : [
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
-        "Root",
-        "Volvo",
-        "Body",
-        "polySurface451_001"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root"
       ],
       {
@@ -111,7 +119,39 @@
       [
         "AF09ED6F-1707-48FD-8720-65B998362C09",
         "Root",
+        "Volvo",
+        "Body",
+        "polySurface451_001"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "AF09ED6F-1707-48FD-8720-65B998362C09",
+        "Root",
         "Sphere_Left"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "BB68B6E1-6DA7-4B9F-98FE-50E7F9D44D83" : {
+    "objectMetadataList" : [
+      [
+        "BB68B6E1-6DA7-4B9F-98FE-50E7F9D44D83",
+        "Root",
+        "Volvo"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "BB68B6E1-6DA7-4B9F-98FE-50E7F9D44D83",
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -149,7 +189,9 @@
     "objectMetadataList" : [
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root"
+        "Root",
+        "GridMaterial",
+        "GridMaterial"
       ],
       {
         "isExpanded" : true,
@@ -157,9 +199,7 @@
       },
       [
         "D66134B1-3681-4A8E-AFE5-29F257229F3B",
-        "Root",
-        "GridMaterial",
-        "GridMaterial"
+        "Root"
       ],
       {
         "isExpanded" : true,
